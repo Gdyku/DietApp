@@ -1,0 +1,60 @@
+# --- System ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Sekrety i lokalna konfiguracja ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Edytory ---
+.idea/
+*.swp
+*.sublime-workspace
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# --- Node / Angular / Ionic (app/) ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+app/dist/
+app/www/
+app/.angular/
+app/coverage/
+app/out-tsc/
+.sass-cache/
+__screenshots__/
+
+# --- Capacitor: natywne buildy (same projekty android/ i ios/ trzymamy w repo) ---
+app/android/app/build/
+app/android/build/
+app/android/.gradle/
+app/android/local.properties
+app/android/capacitor-cordova-android-plugins/
+app/android/app/src/main/assets/public/
+app/ios/App/Pods/
+app/ios/App/App/public/
+app/ios/DerivedData/
+*.keystore
+*.jks
+
+# --- Python (backend/, na później) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/

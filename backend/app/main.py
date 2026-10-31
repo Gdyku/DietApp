@@ -1,0 +1,29 @@
+from typing import Annotated
+
+from fastapi import Depends, FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
+from sqlalchemy.orm import Session
+
+from app.config import get_settings
+from app.db import get_db
+
+app = FastAPI(title="DietApp API", version="0.1.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=get_settings().cors_origins,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/health")
+def health() -> dict[str, str]:
+    return {"status": "ok"}
+
+
+@app.get("/health/db")
+def health_db(db: Annotated[Session, Depends(get_db)]) -> dict[str, str]:
+    db.execute(text("SELECT 1"))
+    return {"status": "ok"}

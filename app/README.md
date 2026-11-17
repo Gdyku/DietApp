@@ -32,9 +32,11 @@ src/
   app/
     app.ts, app.html     # powłoka: ion-app + ion-router-outlet
     app.config.ts        # providery: router, Ionic
-    app.routes.ts        # trasy (leniwie ładowane strony)
-    home/                # strona startowa
-  theme/variables.css    # motyw Ionic (tryb ciemny wg systemu)
+    app.routes.ts        # trasy główne (wszystko idzie do zakładek)
+    tabs/                # dolny pasek zakładek i jego trasy
+    pages/               # ekrany zakładek: meal-plan (Jadłospis), goals (Cele),
+                         # assistant (Asystent AI), recipes (Przepisy), more (Więcej)
+  theme/variables.css    # motyw Ionic + kolory paska zakładek (--app-tab-bar-*)
 capacitor.config.ts      # id aplikacji: pl.dietapp.app
 ```
 

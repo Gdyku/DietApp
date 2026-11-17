@@ -2,9 +2,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-meal-plan',
   imports: [IonHeader, IonToolbar, IonTitle, IonContent],
-  templateUrl: './home.page.html',
+  templateUrl: './meal-plan.page.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage {}
+export class MealPlanPage {}

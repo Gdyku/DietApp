@@ -8,3 +8,11 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Dolny pasek zakładek: czarne tło, żółte ikony i podpisy (w trybie jasnym i ciemnym). */
+:root {
+  --app-yellow: #ffd60a;
+  --app-tab-bar-background: #000000;
+  --app-tab-bar-color: var(--app-yellow);
+  --app-tab-bar-color-selected: var(--app-yellow);
+}

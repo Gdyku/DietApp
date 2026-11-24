@@ -1,0 +1,16 @@
+// Czarny pasek, żółte ikony. Kolory są w src/theme/variables.css (--app-tab-bar-*).
+ion-tab-bar {
+  --background: var(--app-tab-bar-background);
+  --border: none;
+}
+
+ion-tab-button {
+  --color: var(--app-tab-bar-color);
+  --color-selected: var(--app-tab-bar-color-selected);
+  // Nieaktywne zakładki lekko przygaszone, aktywna w pełnym żółtym.
+  opacity: 0.6;
+
+  &.tab-selected {
+    opacity: 1;
+  }
+}
